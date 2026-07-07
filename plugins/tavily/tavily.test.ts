@@ -436,7 +436,7 @@ describe('tavily online handler', () => {
     expect(url).toBe('https://api.tavily.com/search');
     expect(options.headers.Authorization).toBe('Bearer tvly-test-key');
     expect(options.headers['Content-Type']).toBe('application/json');
-    expect(options.headers['X-Client-Source']).toBe('portkey-ai');
+    expect(options.headers['X-Client-Name']).toBe('portkey-ai');
 
     const parsedBody = JSON.parse(options.body);
     expect(parsedBody.max_results).toBe(3);

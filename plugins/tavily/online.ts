@@ -7,7 +7,7 @@ import {
 import { getCurrentContentPart, post } from '../utils';
 
 const BASE_URL = 'https://api.tavily.com/search';
-const TAVILY_CLIENT_SOURCE = 'portkey-ai';
+const TAVILY_CLIENT_NAME = 'portkey-ai';
 const MAX_PROMPT_IMAGES = 5;
 
 type TavilySearchDepth = 'advanced' | 'basic' | 'fast' | 'ultra-fast';
@@ -250,7 +250,7 @@ const performTavilySearch = async (
     headers: {
       Authorization: `Bearer ${parameters.credentials?.apiKey}`,
       'Content-Type': 'application/json',
-      'X-Client-Source': TAVILY_CLIENT_SOURCE,
+      'X-Client-Name': TAVILY_CLIENT_NAME,
     },
   };
 
